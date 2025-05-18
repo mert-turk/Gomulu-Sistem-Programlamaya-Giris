@@ -1,0 +1,21 @@
+11:39:23 **** Incremental Build of configuration Debug for project ders_1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ders_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\dersler\ders_1\ders_1\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ders_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ders_1.elf
+ 
+arm-none-eabi-size  ders_1.elf 
+arm-none-eabi-objdump -h -S ders_1.elf  > "ders_1.list"
+   text	   data	    bss	    dec	    hex	filename
+    800	      8	   1568	   2376	    948	ders_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: ders_1.list
+ 
+11:39:27 **** Incremental Build of configuration Debug for project ders_1 ****
+make -j12 all 
+arm-none-eabi-size  ders_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    800	      8	   1568	   2376	    948	ders_1.elf
+Finished building: default.size.stdout
+ 
